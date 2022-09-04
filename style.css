@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+:root {
+  --clr-primary-400: hsl(216, 30%, 68%);
+  --clr-primary-600: hsl(256, 26%, 20%);
+
+  --clr-neutral-200: hsl(0, 0%, 98%);
+  --clr-neutral-400: hsl(273, 4%, 51%);
+  --clr-neutral-600: hsl(270, 9%, 17%);
+
+  --ff-primary: 'Karla', sans-serif;
+  --ff-secondary: 'DM Serif Display', serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-secondary);
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-600: 1rem;
+}
 /* Box sizing rules & remove default margin and padding*/
 *,
 *::before,
@@ -59,4 +80,63 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+
+body{
+  font-family: var(--ff-body);
+  font-size: var(--fs-600);
+  font-weight: var(--fw-regular);
+}
+
+.container {
+  --max-width: 1110px;
+  --container-padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+}
+
+
+header .even-columns {
+  /* outline: 1px auto; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  font-weight: var(--fw-bold);
+  font-size: 14px;
+}
+
+.btn {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  padding: .5rem 1.25rem;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  border: 1px solid var(--clr-neutral-600);
+  color: var(--clr-neutral-600);
+  cursor: pointer;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list a {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .5rem 1rem;
+  letter-spacing: 1.5px;
+  color: var(--clr-primary-400);
+}
+
+.nav-list a:hover {
+  color: var(--clr-primary-600);
+}
+
+.nav-list li {
+  margin-right: 1rem;
 }
